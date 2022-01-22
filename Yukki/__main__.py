@@ -229,11 +229,7 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""Hello ,
-My name is {BOT_NAME}.
-A Telegram Music+Video Streaming bot with some useful features.
-
-All commands can be used with: / """
+home_text_pm = f""" """
 
 
 @app.on_message(filters.command("sidhu") & filters.private)
@@ -408,20 +404,7 @@ All commands can be used with: /
     if mod_match:
         module = mod_match.group(1)
         text = (
-            "{} **{}**:\n".format(
-                "Here is the help for", HELPABLE[module].__MODULE__
-            )
-            + HELPABLE[module].__HELP__
-        )
-        key = InlineKeyboardMarkup(
-            [
-                [
-                    
-                    InlineKeyboardButton(
-                        text="🔄 Close", callback_data="close"
-                    ),
-                ],
-            ]
+            
         )
 
         await query.message.edit(
